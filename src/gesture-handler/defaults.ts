@@ -16,6 +16,7 @@ export const DefaultEvent: GestureUpdateEvent<PanGestureHandlerEventPayload> = {
   velocityY: 0,
   x: 0,
   y: 0,
+  pointerType: 'touch'
 };
 
 export const DefaultScreenDimensions = {
