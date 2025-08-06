@@ -315,8 +315,8 @@ class ScreenStack(context: Context?) : ScreenContainer(context) {
         super.drawChild(op.canvas!!, op.child, op.drawingTime)
     }
 
-    private fun obtainDrawingOp(): DrawingOp =
-        if (drawingOpPool.isEmpty()) DrawingOp() else drawingOpPool.removeLast()
+    private fun obtainDrawingOp(): DrawingOp = 
+        if (drawingOpPool.isEmpty()) DrawingOp() else drawingOpPool.removeAt(drawingOpPool.size - 1)
 
     private inner class DrawingOp {
         var canvas: Canvas? = null
